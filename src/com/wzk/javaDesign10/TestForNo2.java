@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class TestForNo2 {
     public static void main(String[] args){
 //        turnToFahrenheit();
-        areaOfCylinders();面积保留4位小数，体积保留一位小数，四舍五入
+        areaOfCylinders();
     }
 
     private static void turnToFahrenheit(){
