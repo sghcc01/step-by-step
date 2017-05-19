@@ -12,14 +12,28 @@ public class TestForNo2 {
 //        feetTurnToMeters();
 //        poundsTurnToKilograms();
 //        computationalGratuity();
-        sumOfAllNumbers();
+//        sumOfAllNumbers();
+        inputMinuteTurnToYears();
     }
-/*
- ( 求一个整數各位數的和 ） 编写程序 ， 读取一个在 0 和 1000 之间的整数 ， 并将该整数的各位数字
-相加 。 例如 ： 整数是 932 , 各位数字之和为 14 。
-提示 ： 利用操作符 X 分解数字 ， 然后使用操作符 / 去掉分解出来的數字 。 例如 ： 932 X 10 — 2 ,
-932 / 10 = 930
- */
+/*( 求出年教 ） 编写程序 ， 提示用户输入分钟数 （ 例如十亿 ） 然后显示这些分钟代表多少年和多少天 。
+    为了简化问题 ， 假设一年有 365 天
+*/
+    private static void inputMinuteTurnToYears() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the number of minutes:");
+        int minutes = input.nextInt();
+        int days = minutes / (60 * 24);
+        int years = days / 365;
+        int leftDays = days % 365;
+        System.out.println(minutes + "minutes is approximately " + years + " years and " + leftDays + " days");
+    }
+
+    /*
+     ( 求一个整數各位數的和 ） 编写程序 ， 读取一个在 0 和 1000 之间的整数 ， 并将该整数的各位数字
+    相加 。 例如 ： 整数是 932 , 各位数字之和为 14 。
+    提示 ： 利用操作符 X 分解数字 ， 然后使用操作符 / 去掉分解出来的數字 。 例如 ： 932 X 10 — 2 ,
+    932 / 10 = 930
+     */
     private static void sumOfAllNumbers() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a number between 0 and 1000: ");
