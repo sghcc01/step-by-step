@@ -13,11 +13,27 @@ public class TestForNo2 {
 //        poundsTurnToKilograms();
 //        computationalGratuity();
 //        sumOfAllNumbers();
-        inputMinuteTurnToYears();
+//        inputMinuteTurnToYears();
+        showCurrentTime();
     }
-/*( 求出年教 ） 编写程序 ， 提示用户输入分钟数 （ 例如十亿 ） 然后显示这些分钟代表多少年和多少天 。
-    为了简化问题 ， 假设一年有 365 天
-*/
+
+    private static void showCurrentTime() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the time zone offset to GMT: ");
+        int timeZone = input.nextInt();
+        long totalMilliseconds = System.currentTimeMillis();
+        long totalSeconds = totalMilliseconds / 1000;
+        long currentSecond = totalSeconds % 60;
+        long totalMinutes = totalSeconds / 60;
+        long currentMinutes = totalMinutes % 60;
+        long totalHours = totalMinutes / 60 + timeZone;
+        long currentHours = totalHours % 24;
+        System.out.println("The current time is " + currentHours + ":" + currentMinutes + ":" + currentSecond);
+    }
+
+    /*( 求出年教 ） 编写程序 ， 提示用户输入分钟数 （ 例如十亿 ） 然后显示这些分钟代表多少年和多少天 。
+        为了简化问题 ， 假设一年有 365 天
+    */
     private static void inputMinuteTurnToYears() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter the number of minutes:");
