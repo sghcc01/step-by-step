@@ -14,7 +14,31 @@ public class TestForNo2 {
 //        computationalGratuity();
 //        sumOfAllNumbers();
 //        inputMinuteTurnToYears();
-        showCurrentTime();
+//        showCurrentTime();
+//        calculateAverageAcceleration();
+        calculateEnergyForHeatedWater();
+    }
+
+    private static void calculateEnergyForHeatedWater() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the amount of water in kilogram: ");
+        double amountOfWater = input.nextDouble();
+        System.out.println("Enter the initial temperature: ");
+        double initialTemperature = input.nextDouble();
+        System.out.println("Enter the final temperature: ");
+        double finalTemperature = input.nextDouble();
+        double culateEnergy = (finalTemperature - initialTemperature) * amountOfWater * 4184;
+        System.out.println("The energy needed is " + culateEnergy);
+    }
+
+    private static void calculateAverageAcceleration() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter v0、v1 and t: ");
+        double v0 = input.nextDouble();
+        double v1 = input.nextDouble();
+        double t = input.nextDouble();
+        double a = (v1 - v0) / t;
+        System.out.println("The average acceleration is " + a);
     }
 
     private static void showCurrentTime() {
