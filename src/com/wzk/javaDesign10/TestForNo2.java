@@ -16,7 +16,21 @@ public class TestForNo2 {
 //        inputMinuteTurnToYears();
 //        showCurrentTime();
 //        calculateAverageAcceleration();
-        calculateEnergyForHeatedWater();
+//        calculateEnergyForHeatedWater();
+        calculatePrincipalAndInterest();
+    }
+
+    private static void calculatePrincipalAndInterest() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the monthly saving amount: ");
+        double amountOfMonthly = input.nextDouble();
+        double firstMonthlyOfAmount = amountOfMonthly * (1 + 0.00417);
+        double secondMonthlyOfAmount = (amountOfMonthly + firstMonthlyOfAmount) * (1 + 0.00417);
+        double threadMonthlyOfAmount = (amountOfMonthly + secondMonthlyOfAmount) * (1 + 0.00417);
+        double fourMonthlyOfAmount = (amountOfMonthly + threadMonthlyOfAmount) * (1 + 0.00417);
+        double fiveMonthlyOfAmount = (amountOfMonthly + fourMonthlyOfAmount) * (1 + 0.00417);
+        double sixMonthlyOfAmount = (amountOfMonthly + fiveMonthlyOfAmount) * (1 + 0.00417);
+        System.out.println("After the sixth month,the account value is $" + (int)(sixMonthlyOfAmount * 100) / 100.0);
     }
 
     private static void calculateEnergyForHeatedWater() {
