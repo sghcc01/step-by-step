@@ -17,7 +17,22 @@ public class TestForNo2 {
 //        showCurrentTime();
 //        calculateAverageAcceleration();
 //        calculateEnergyForHeatedWater();
-        calculatePrincipalAndInterest();
+//        calculatePrincipalAndInterest();
+         printForm();
+    }
+
+    private static void printForm() {
+        System.out.print("a\t");
+        System.out.print("b\t");
+        System.out.print("pow(a, b)\t");
+        System.out.println();
+        for (int i = 1; i < 6; i++) {
+            int j = i + 1;
+            System.out.print(i + "\t");
+            System.out.print(j + "\t");
+            System.out.print((int)(Math.pow(i,j)));
+            System.out.println();
+        }
     }
 
     private static void calculatePrincipalAndInterest() {
