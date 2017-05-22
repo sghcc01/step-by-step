@@ -18,7 +18,20 @@ public class TestForNo2 {
 //        calculateAverageAcceleration();
 //        calculateEnergyForHeatedWater();
 //        calculatePrincipalAndInterest();
-         printForm();
+//         printForm();
+        calculateTravelExpenses();
+    }
+
+    private static void calculateTravelExpenses() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the dirving distance: ");
+        double distance = input.nextDouble();
+        System.out.println("Enter miles per gallon: ");
+        double miles = input.nextDouble();
+        System.out.println("Enter price per gallon: ");
+        double price = input.nextDouble();
+        double travelExpenses = distance / miles * price;
+        System.out.println("The cast of dirver is $" + (int)(travelExpenses * 100) / 100.0);
     }
 
     private static void printForm() {
