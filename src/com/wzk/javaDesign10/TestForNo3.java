@@ -9,8 +9,36 @@ public class TestForNo3 {
     public static void main(String args[]) {
 //        practiceSubtraction();
 //        ConputeAndInterpretBMI();
-        ChineseZodiac();
+//        ChineseZodiac();
+//        whichDay();
+        test3_31();
+    }
+
+    private static void test3_31() {
+        int x = 1,a= 3;
+        switch (a) {
+            case 1: x += 5;break;
+            case 2: x += 10;break;
+            case 3: x += 16;break;
+            case 4: x += 34;break;
         }
+        System.out.println(x);
+    }
+
+    private static void whichDay() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a day that will tell you it is weekday or weekend：");
+        int day = input.nextInt();
+        switch (day) {
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5: System.out.println("Weekday");break;
+            case 0:
+            case 6: System.out.println("Weekend");
+        }
+    }
 
     private static void ChineseZodiac() {
         Scanner input = new Scanner(System.in);
