@@ -2,9 +2,6 @@ package com.wzk.javaDesign10;
 
 import java.util.Scanner;
 
-/**
- * Created by admin on 2017/5/22.
- */
 public class TestForNo3 {
     public static void main(String args[]) {
 //        practiceSubtraction();
