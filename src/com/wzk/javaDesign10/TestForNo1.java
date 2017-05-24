@@ -38,7 +38,7 @@ public class TestForNo1 {
         System.out.println(a);
         System.out.println ( "3.0 * 2 / 4 :" + 3.0* 2 / 4 );
         System.out.println(Math.pow(2,3.5));
-        System.out.println(1111);
+        System.out.println(0B1111);
         long ssn = 1223334;
         System.out.println("long ssn is " + ssn);
     }
