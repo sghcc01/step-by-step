@@ -13,7 +13,31 @@ public class TestForNo3 {
 //        whichDay();
 //        test3_31();
 //        solvingEquations();
-        showMonth();
+//        showMonth();
+        showWhichDay();
+    }
+
+    private static void showWhichDay() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter today's day: ");
+        int today = input.nextInt();
+        System.out.println("Enter the number of days elapsed since today: ");
+        int days = input.nextInt();
+        int someday = today + days % 7;
+        switchDay();
+        System.out.println("Today is " + days + " and the future day is " + someday);
+    }
+
+    private static void switchDay(int i) {
+        switch (i) {
+            case 0:i= "";
+            case 1:System.out.println();
+            case 2:System.out.println();
+            case 3:System.out.println();
+            case 4:System.out.println();
+            case 5:System.out.println();
+            case 6:System.out.println();
+        }
     }
 
     private static void showMonth() {
