@@ -2,9 +2,6 @@ package com.wzk.javaDesign10;
 
 import java.util.Scanner;
 
-/**
- * Created by admin on 2017/5/17.
- */
 public class TestForNo2 {
     public static void main(String[] args){
 //        turnToFahrenheit();
