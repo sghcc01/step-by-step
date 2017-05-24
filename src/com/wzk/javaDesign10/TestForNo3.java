@@ -17,11 +17,14 @@ public class TestForNo3 {
     }
 
     private static void showMonth() {
+        //monthTest变量中的随机数应该是正确的取法；
+        // month变量中随机数是根据时间变化的，不能算作是实际意义上的随机数。
         int month = (int)(System.currentTimeMillis() % 12) + 1;
-        switch (month) {
+        int monthTest = (int)(Math.random() * 12 + 1);
+        switch (monthTest) {
             case 1: System.out.println("January");break;
             case 2: System.out.println("February");break;
-            case 3: System.out.println("Marth");break;
+            case 3: System.out.println("March");break;
             case 4: System.out.println("April");break;
             case 5: System.out.println("May");break;
             case 6: System.out.println("June");break;
