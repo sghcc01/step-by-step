@@ -23,21 +23,28 @@ public class TestForNo3 {
         int today = input.nextInt();
         System.out.println("Enter the number of days elapsed since today: ");
         int days = input.nextInt();
+        String todayName = " ";
         int someday = today + days % 7;
-        switchDay();
-        System.out.println("Today is " + days + " and the future day is " + someday);
-    }
-
-    private static void switchDay(int i) {
-        switch (i) {
-            case 0:i= "";
-            case 1:System.out.println();
-            case 2:System.out.println();
-            case 3:System.out.println();
-            case 4:System.out.println();
-            case 5:System.out.println();
-            case 6:System.out.println();
+        String somedayName = " ";
+        switch (today) {
+            case 0:todayName = "Sunday";break;
+            case 1:todayName = "Monday";break;
+            case 2:todayName = "Tuesday";break;
+            case 3:todayName = "Wednesday";break;
+            case 4:todayName = "Thursday";break;
+            case 5:todayName = "Friday";break;
+            case 6:todayName = "Saturday";
         }
+        switch (someday) {
+            case 0:somedayName = "Sunday";break;
+            case 1:somedayName = "Monday";break;
+            case 2:somedayName = "Tuesday";break;
+            case 3:somedayName = "Wednesday";break;
+            case 4:somedayName = "Thursday";break;
+            case 5:somedayName = "Friday";break;
+            case 6:somedayName = "Saturday";
+        }
+        System.out.println("Today is " + todayName + " and the future day is " + somedayName);
     }
 
     private static void showMonth() {
