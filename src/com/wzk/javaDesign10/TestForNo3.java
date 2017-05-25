@@ -13,7 +13,7 @@ public class TestForNo3 {
 //        showMonth();
 //        showWhichDay();
 //        showNumberNotDesc();
-        printISBN10();
+//        printISBN10();
         showHowManyDaysEachMonth();
     }
 
@@ -24,7 +24,37 @@ public class TestForNo3 {
         int years = input.nextInt();
         final boolean isLeapYear = years % 4 == 0 && years % 100 != 0 || years % 400 == 0;
         if (month == 2 && isLeapYear) {
-            System.out.println("");
+            System.out.println(monthName(month) + " " + years + " has 28 days");
+        } else {
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12: System.out.println(monthName(month) + " " + years + " has 31 days");break;
+                case 2: System.out.println(monthName(month) + " " + years + " has 29 days");break;
+                default: System.out.println(monthName(month) + " " + years + " has 30 days");
+            }
+        }
+    }
+
+    private static String monthName(int month) {
+        switch (month) {
+            case 1: return "January";
+            case 2: return "February";
+            case 3: return "March";
+            case 4: return "April";
+            case 5: return "May";
+            case 6: return "June";
+            case 7: return "July";
+            case 8: return "August";
+            case 9: return "September";
+            case 10: return "October";
+            case 11: return "November";
+            case 12: return "December";
+            default: return "";
         }
     }
 
