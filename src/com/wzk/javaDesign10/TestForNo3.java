@@ -14,7 +14,21 @@ public class TestForNo3 {
 //        showWhichDay();
 //        showNumberNotDesc();
 //        printISBN10();
-        showHowManyDaysEachMonth();
+//        showHowManyDaysEachMonth();
+        verificationPalindrome();
+    }
+
+    private static void verificationPalindrome() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a three-digit integer: ");
+        int digit = input.nextInt();
+        int first_digit = digit % 10;
+        final int three_digit = (digit / 100);
+        if (first_digit == three_digit) {
+            System.out.println(digit + " is a palindrome");
+        } else {
+            System.out.println(digit + " is not a palindrome");
+        }
     }
 
     private static void showHowManyDaysEachMonth() {
@@ -244,5 +258,6 @@ public class TestForNo3 {
         boolean result = number1 - number2 == input.nextInt();
         System.out.println("It is " + result);
     }
+
 
 }
