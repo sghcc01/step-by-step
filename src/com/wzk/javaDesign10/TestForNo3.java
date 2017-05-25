@@ -14,6 +14,18 @@ public class TestForNo3 {
 //        showWhichDay();
 //        showNumberNotDesc();
         printISBN10();
+        showHowManyDaysEachMonth();
+    }
+
+    private static void showHowManyDaysEachMonth() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter month and years: ");
+        int month = input.nextInt();
+        int years = input.nextInt();
+        final boolean isLeapYear = years % 4 == 0 && years % 100 != 0 || years % 400 == 0;
+        if (month == 2 && isLeapYear) {
+            System.out.println("");
+        }
     }
 
     private static void printISBN10() {
