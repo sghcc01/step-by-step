@@ -11,7 +11,47 @@ public class TestForNo3 {
 //        test3_31();
 //        solvingEquations();
 //        showMonth();
-        showWhichDay();
+//        showWhichDay();
+//        showNumberNotDesc();
+        printISBN10();
+    }
+
+    private static void printISBN10() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the first nine number: ");
+        int first = input.nextInt();
+        int two = input.nextInt();
+        int three = input.nextInt();
+        int four = input.nextInt();
+        int five = input.nextInt();
+        int six = input.nextInt();
+        int seven = input.nextInt();
+        int eight = input.nextInt();
+        int nine = input.nextInt();
+        int ten = ( first * 1 + two * 2 + three * 3 + four * 4 + five * 5
+                    + six * 6 + seven * 7 + eight * 8 + nine * 9) % 11;
+        switch (ten) {
+            case 10:System.out.println(first + "" + two + "" + three
+                    + "" + four + "" + five + "" + six + "" + seven
+                    + "" + eight + "" + nine + "X");break;
+            default:System.out.println(first + "" + two + "" + three
+                    + "" + four + "" + five + "" + six + "" + seven
+                    + "" + eight + "" + nine + "" + ten);
+        }
+    }
+
+    private static void showNumberNotDesc() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter three number: ");
+        int a = input.nextInt();
+        int b = input.nextInt();
+        int c = input.nextInt();
+        if (a >= b && b >= c) {
+            int temp = b;
+            b = c;
+            c = temp;
+        }
+        System.out.println(a + " " + b + " " + c);
     }
 
     private static void showWhichDay() {
