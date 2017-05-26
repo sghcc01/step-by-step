@@ -18,7 +18,18 @@ public class TestForNo3 {
 //        verificationPalindrome();
 //        guessPositiveOrNegative();
 //        lottery();
-        showRandomCoordinates();
+//        showRandomCoordinates();
+        guessingGame();
+    }
+
+    private static void guessingGame() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("scissor(0), rock(1), paper(2): ");
+        int computerResult = (int)(Math.random() * 3);
+        int yourResult = input.nextInt();
+        if (computerResult == yourResult) {
+            System.out.println("The computer is " + );
+        }
     }
 
     private static void showRandomCoordinates() {
