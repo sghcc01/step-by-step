@@ -28,7 +28,44 @@ public class TestForNo3 {
         int computerResult = (int)(Math.random() * 3);
         int yourResult = input.nextInt();
         if (computerResult == yourResult) {
-            System.out.println("The computer is " + );
+            System.out.println("The computer is " + result(computerResult) + ". You are " + result(yourResult)
+            + " too. It's a draw.");
+        } else if (computerResult == 0) {
+            switch (yourResult) {
+                case 1:
+                    System.out.println("The computer is " + result(computerResult) + ". You are " + result(yourResult)
+                            + ". You won.");break;
+                case 2:
+                    System.out.println("The computer is " + result(computerResult) + ". You are " + result(yourResult)
+                            + ". Computer won.");break;
+            }
+        } else if (computerResult == 1) {
+            switch (yourResult) {
+                case 2:
+                    System.out.println("The computer is " + result(computerResult) + ". You are " + result(yourResult)
+                            + ". You won.");break;
+                case 0:
+                    System.out.println("The computer is " + result(computerResult) + ". You are " + result(yourResult)
+                            + ". Computer won.");break;
+            }
+        } else if (computerResult == 2) {
+            switch (yourResult) {
+                case 0:
+                    System.out.println("The computer is " + result(computerResult) + ". You are " + result(yourResult)
+                            + ". You won.");break;
+                case 1:
+                    System.out.println("The computer is " + result(computerResult) + ". You are " + result(yourResult)
+                            + ". Computer won.");break;
+            }
+        }
+    }
+
+    private static String result(int result) {
+        switch (result) {
+            case 0: return "scissor";
+            case 1: return "rock";
+            case 2: return "paper";
+            default: return "";
         }
     }
 
