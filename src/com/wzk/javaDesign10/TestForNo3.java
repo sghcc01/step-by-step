@@ -15,7 +15,20 @@ public class TestForNo3 {
 //        showNumberNotDesc();
 //        printISBN10();
 //        showHowManyDaysEachMonth();
-        verificationPalindrome();
+//        verificationPalindrome();
+        guessPositiveOrNegative();
+    }
+
+    private static void guessPositiveOrNegative() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter you guess: ");
+        int guessResult = input.nextInt();
+        int result = (int)(Math.random() * 2);
+        if (guessResult == result) {
+            System.out.println("It's current!");
+        } else {
+            System.out.println("It's wrong. result is " + result);
+        }
     }
 
     private static void verificationPalindrome() {
