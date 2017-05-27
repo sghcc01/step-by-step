@@ -30,7 +30,6 @@ public class TestForNo3 {
 //        showDivisible();//提示用户输入一个整数值，然后判定它是否能被 5 和6 整除，是否能被 5 或 6 整除，以及是否能被 5 或 6 整除但是不能同时被它们整除
 //        tellYouWhetherInTheTriangle();//假设一个直角三角形放在一个平面上，y= -x / 2 + 100;直角点在（0,0) 处，其他两个点分别在（ 200, 0 ) 和（ 0, 100 ) 处。编写程序，提示用户输人一个点的；c 坐标和7坐标，然后判定这个点是否在该三角形内
         exchangeRateConversion();
-
     }
 
     private static void exchangeRateConversion() {
