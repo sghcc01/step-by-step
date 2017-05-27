@@ -22,7 +22,20 @@ public class TestForNo3 {
 //        guessingGame();
 //        showTransportationCost();
 //        calculateTriangularCircumference();
-        tellYouWhetherInTheCircle();
+//        tellYouWhetherInTheCircle();//检査这个点是否在以原点（0, 0) 为圆心、半径为 10 的圆内
+        tellYouWetherInTheRectangle();//检测该点是否在以原点（0,0)为中心、宽为 10、 高为 5 的矩形中
+    }
+
+    private static void tellYouWetherInTheRectangle() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a point with two coordinates: ");
+        double x = input.nextDouble();
+        double y = input.nextDouble();
+        if (Math.pow(x * x,0.5) <= 5 && Math.pow(y * y,0.5) <=2.5) {
+            System.out.println("Point (" + x + "," + y +")" + " is in the rectangle");
+        } else {
+            System.out.println("Point (" + x + "," + y +")" + " is not in the rectangle");
+        }
     }
 
     private static void tellYouWhetherInTheCircle() {
