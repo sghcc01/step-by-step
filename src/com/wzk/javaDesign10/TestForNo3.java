@@ -28,7 +28,36 @@ public class TestForNo3 {
 //        tellYouWetherInTheRectangle();//检测该点是否在以原点（0,0)为中心、宽为 10、 高为 5 的矩形中
 //        chooseAPokerCard();//(游戏：挑一张牌）编写程序，模拟从一副S2张的牌中选择一张牌。程序应该显示牌的大小(Ace、2、3、4、5、6、7、8、9、10、Jack、Queen、King)以及牌的花色（Clubs(黑梅花)、Diamonds(红方块）、Hearts(红心）、Spades(黑桃））。下面是这个程序的运行示例：
 //        showDivisible();//提示用户输入一个整数值，然后判定它是否能被 5 和6 整除，是否能被 5 或 6 整除，以及是否能被 5 或 6 整除但是不能同时被它们整除
-        tellYouWhetherInTheTriangle();//假设一个直角三角形放在一个平面上，y= -x / 2 + 100;直角点在（0,0) 处，其他两个点分别在（ 200, 0 ) 和（ 0, 100 ) 处。编写程序，提示用户输人一个点的；c 坐标和7坐标，然后判定这个点是否在该三角形内
+//        tellYouWhetherInTheTriangle();//假设一个直角三角形放在一个平面上，y= -x / 2 + 100;直角点在（0,0) 处，其他两个点分别在（ 200, 0 ) 和（ 0, 100 ) 处。编写程序，提示用户输人一个点的；c 坐标和7坐标，然后判定这个点是否在该三角形内
+        exchangeRateConversion();
+
+    }
+
+    private static void exchangeRateConversion() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the exchange rate from dollars to RMB: ");
+        double exchangeRate = input.nextDouble();
+        System.out.println("Enter 0 to convert dollars to RMB and 1 vice versa: ");
+        int status = input.nextInt();
+        //待优化，当status值不为0或者1时，需要输出incurrent input，并且退出运行程序
+        if (status != 0 || status != 1) {
+        }
+        System.out.println("Enter the " + (statusment(status) ? "RMB" : "dollar") + " amount: ");
+        double amount = input.nextDouble();
+        switch (status) {
+            case 0:
+                System.out.println("$" + amount + " is " + amount * exchangeRate + " yuan");
+            //此处转换时使用了去尾，实际上应该是四舍五入
+            case 1:
+                System.out.println(amount + " yuan is $" + (int)(amount / exchangeRate * 100) / 100.0);
+        }
+    }
+
+    private static boolean statusment(int status) {
+        switch (status) {
+            case 0:return false;
+            default:return true;
+        }
     }
 
     private static void tellYouWhetherInTheTriangle() {
