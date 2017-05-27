@@ -1,5 +1,7 @@
 package com.wzk.javaDesign10;
 
+import com.wzk.Main;
+
 import java.util.Scanner;
 
 public class TestForNo3 {
@@ -23,7 +25,43 @@ public class TestForNo3 {
 //        showTransportationCost();
 //        calculateTriangularCircumference();
 //        tellYouWhetherInTheCircle();//检査这个点是否在以原点（0, 0) 为圆心、半径为 10 的圆内
-        tellYouWetherInTheRectangle();//检测该点是否在以原点（0,0)为中心、宽为 10、 高为 5 的矩形中
+//        tellYouWetherInTheRectangle();//检测该点是否在以原点（0,0)为中心、宽为 10、 高为 5 的矩形中
+        chooseAPokerCard();//(游戏：挑一张牌）编写程序，模拟从一副S2张的牌中选择一张牌。程序应该显示牌的大小(Ace、2、3、4、5、6、7、8、9、10、Jack、Queen、King)以及牌的花色（Clubs(黑梅花)、Diamonds(红方块）、Hearts(红心）、Spades(黑桃））。下面是这个程序的运行示例：
+    }
+
+    private static void chooseAPokerCard() {
+        int number = (int)(Math.random() * 13) + 1;
+        int colorOfCard = (int) (Math.random() * 4) + 1;
+        System.out.println("The card you picked is " + changeNumber(number) + " of " + changeColor(colorOfCard));
+    }
+
+    private static String changeColor(int colorOfCard) {
+        switch (colorOfCard) {
+            case 1:return "Clubs";
+            case 2:return "Diamonds";
+            case 3:return "Hearts";
+            case 4:return "Spades";
+            default: return null;
+        }
+    }
+
+    private static String changeNumber(int number) {
+        switch (number) {
+            case 1: return "Ace";
+            case 2: return "2";
+            case 3: return "3";
+            case 4: return "4";
+            case 5: return "5";
+            case 6: return "6";
+            case 7: return "7";
+            case 8: return "8";
+            case 9: return "9";
+            case 10: return "10";
+            case 11: return "Jack";
+            case 12: return "Queen";
+            case 13: return "King";
+            default:return null;
+        }
     }
 
     private static void tellYouWetherInTheRectangle() {
