@@ -26,7 +26,19 @@ public class TestForNo3 {
 //        calculateTriangularCircumference();
 //        tellYouWhetherInTheCircle();//检査这个点是否在以原点（0, 0) 为圆心、半径为 10 的圆内
 //        tellYouWetherInTheRectangle();//检测该点是否在以原点（0,0)为中心、宽为 10、 高为 5 的矩形中
-        chooseAPokerCard();//(游戏：挑一张牌）编写程序，模拟从一副S2张的牌中选择一张牌。程序应该显示牌的大小(Ace、2、3、4、5、6、7、8、9、10、Jack、Queen、King)以及牌的花色（Clubs(黑梅花)、Diamonds(红方块）、Hearts(红心）、Spades(黑桃））。下面是这个程序的运行示例：
+//        chooseAPokerCard();//(游戏：挑一张牌）编写程序，模拟从一副S2张的牌中选择一张牌。程序应该显示牌的大小(Ace、2、3、4、5、6、7、8、9、10、Jack、Queen、King)以及牌的花色（Clubs(黑梅花)、Diamonds(红方块）、Hearts(红心）、Spades(黑桃））。下面是这个程序的运行示例：
+        showDivisible();//提示用户输入一个整数值，然后判定它是否能被 5 和6 整除，是否能被 5 或 6 整除，以及是否能被 5 或 6 整除但是不能同时被它们整除
+    }
+
+    private static void showDivisible() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter an integer: ");
+        int number = input.nextInt();
+        boolean isDivisible_5 = number % 5 == 0;
+        boolean isDivisible_6 = number % 6 == 0;
+        System.out.println("Is " + number + "divisible by 5 and 6? " + (isDivisible_5 && isDivisible_6));
+        System.out.println("Is " + number + "divisible by 5 or 6? " + (isDivisible_5 || isDivisible_6));
+        System.out.println("Is " + number + "divisible by 5 or 6, but not both? " + (isDivisible_5 ^ isDivisible_6));
     }
 
     private static void chooseAPokerCard() {
