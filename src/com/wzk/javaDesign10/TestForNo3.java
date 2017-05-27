@@ -27,7 +27,20 @@ public class TestForNo3 {
 //        tellYouWhetherInTheCircle();//检査这个点是否在以原点（0, 0) 为圆心、半径为 10 的圆内
 //        tellYouWetherInTheRectangle();//检测该点是否在以原点（0,0)为中心、宽为 10、 高为 5 的矩形中
 //        chooseAPokerCard();//(游戏：挑一张牌）编写程序，模拟从一副S2张的牌中选择一张牌。程序应该显示牌的大小(Ace、2、3、4、5、6、7、8、9、10、Jack、Queen、King)以及牌的花色（Clubs(黑梅花)、Diamonds(红方块）、Hearts(红心）、Spades(黑桃））。下面是这个程序的运行示例：
-        showDivisible();//提示用户输入一个整数值，然后判定它是否能被 5 和6 整除，是否能被 5 或 6 整除，以及是否能被 5 或 6 整除但是不能同时被它们整除
+//        showDivisible();//提示用户输入一个整数值，然后判定它是否能被 5 和6 整除，是否能被 5 或 6 整除，以及是否能被 5 或 6 整除但是不能同时被它们整除
+        tellYouWhetherInTheTriangle();//假设一个直角三角形放在一个平面上，y= -x / 2 + 100;直角点在（0,0) 处，其他两个点分别在（ 200, 0 ) 和（ 0, 100 ) 处。编写程序，提示用户输人一个点的；c 坐标和7坐标，然后判定这个点是否在该三角形内
+    }
+
+    private static void tellYouWhetherInTheTriangle() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a point's x- and y-coordinates: ");
+        double x = input.nextDouble();
+        double y = input.nextDouble();
+        if (x >= 0 && y >= 0 && y + x / 2 <= 100) {
+            System.out.println("The point is in the triangle");
+        } else {
+            System.out.println("The point is not in the triangle");
+        }
     }
 
     private static void showDivisible() {
