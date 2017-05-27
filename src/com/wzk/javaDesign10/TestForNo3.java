@@ -19,7 +19,39 @@ public class TestForNo3 {
 //        guessPositiveOrNegative();
 //        lottery();
 //        showRandomCoordinates();
-        guessingGame();
+//        guessingGame();
+//        showTransportationCost();
+        calculateTriangularCircumference();
+    }
+
+    private static void calculateTriangularCircumference() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the length of the three sides: ");
+        double sides1 = input.nextDouble();
+        double sides2 = input.nextDouble();
+        double sides3 = input.nextDouble();
+        double perimeter = sides1 + sides2 + sides3;
+        if (sides1 + sides2 > sides3
+                && sides1 + sides3 > sides2
+                && sides2 + sides3 > sides1) {
+            System.out.println("Perimeter is " + perimeter);
+        }else System.out.println("The input value is not legal");
+    }
+
+    private static void showTransportationCost() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the package weight: ");
+        double weight = input.nextDouble();
+        if (weight > 0 && weight <= 1) {
+            System.out.println("The transportation cost is $3.5");
+        }else if (weight > 1 && weight <= 3) {
+            System.out.println("The transportation cost is $5.5");
+        }else if (weight > 3 && weight <= 10) {
+            System.out.println("The transportation cost is $8.5");
+        }else if (weight > 10 && weight <= 20) {
+            System.out.println("The transportation cost is $10.5");
+        }else
+            System.out.println("The package cannot be shipped");
     }
 
     private static void guessingGame() {
