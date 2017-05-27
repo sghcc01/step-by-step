@@ -21,7 +21,21 @@ public class TestForNo3 {
 //        showRandomCoordinates();
 //        guessingGame();
 //        showTransportationCost();
-        calculateTriangularCircumference();
+//        calculateTriangularCircumference();
+        tellYouWhetherInTheCircle();
+    }
+
+    private static void tellYouWhetherInTheCircle() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a point with two coordinates: ");
+        double x = input.nextDouble();
+        double y = input.nextDouble();
+        double length_x_y = Math.pow(x * x + y * y, 0.5);
+        if (length_x_y > 10) {
+            System.out.println("Point (" + x + "," + y +")" + " is not in the circle");
+        } else if (length_x_y <= 10) {
+            System.out.println("Point (" + x + "," + y +")" + " is in the circle");
+        }
     }
 
     private static void calculateTriangularCircumference() {
