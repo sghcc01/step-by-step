@@ -38,8 +38,10 @@ public class TestForNo3 {
         double exchangeRate = input.nextDouble();
         System.out.println("Enter 0 to convert dollars to RMB and 1 vice versa: ");
         int status = input.nextInt();
-        //待优化，当status值不为0或者1时，需要输出incurrent input，并且退出运行程序
+        //当status值不为0或者1时，输出incurrent input，并且退出运行程序
         if (status != 0 || status != 1) {
+            System.out.println("Incurrent input");
+            System.exit(1);
         }
         System.out.println("Enter the " + (statusment(status) ? "RMB" : "dollar") + " amount: ");
         double amount = input.nextDouble();
