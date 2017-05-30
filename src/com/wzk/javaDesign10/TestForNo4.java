@@ -15,6 +15,7 @@ public class TestForNo4 {
     private static void enterCharacterToShowASCII() {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter an character: ");
+        //charAt(0)返回字符串指定位置的字符
         char character = input.next().charAt(0);
         System.out.println("The Unicode for the character " + character + " is " + (int)(character));
     }
