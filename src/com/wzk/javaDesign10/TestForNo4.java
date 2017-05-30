@@ -6,7 +6,25 @@ public class TestForNo4 {
     public static void main(String[] args) {
 //        calculateAreaOfPentagon();
 //        calculateMaximumCircleDistance();
-        calculateAreaOfTriangle();
+//        calculateAreaOfTriangle();
+//        enterIntegerToShowASCII();
+        enterCharacterToShowASCII();
+
+    }
+
+    private static void enterCharacterToShowASCII() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter an character: ");
+        char character = input.next().charAt(0);
+        System.out.println("The Unicode for the character " + character + " is " + (int)(character));
+    }
+
+    private static void enterIntegerToShowASCII() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter an ASCII code: ");
+        int code = input.nextInt();
+        char charCode = (char)code;
+        System.out.println("The character for ASCII code " + code + " is " + charCode);
     }
 
     private static void calculateAreaOfTriangle() {
