@@ -11,7 +11,25 @@ public class TestForNo4 {
 //        enterCharacterToShowASCII();
 //        guessBirthday();
 //        showTheHexValue();
-        hexValueTurnToBinary();
+//        hexValueTurnToBinary();
+//        convertLettersToNumbers();
+
+    }
+
+    private static void convertLettersToNumbers() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a letter grade: ");
+        char ch = Character.toUpperCase(input.next().charAt(0));
+        if (ch < 'A' || ch > 'F' || ch == 'E') {
+            System.out.println(ch + " is a invalid input");
+            System.exit(1);
+        }
+        int number = Math.abs(ch - 'A' - 4);
+        if (ch != 'F') {
+            System.out.println("The numeric value for grade is " + ch + " is " + number);
+        } else {
+            System.out.println("The numeric value for grade is " + ch + " is 0");
+        }
     }
 
     private static void hexValueTurnToBinary() {
