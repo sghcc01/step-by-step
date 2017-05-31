@@ -14,8 +14,41 @@ public class TestForNo4 {
 //        hexValueTurnToBinary();
 //        convertLettersToNumbers();
 //        showRandomUppercaseLetter();
-        showHowManyDays();
+//        showHowManyDays();
+//        showLenghtAndFirstCharacter();
+        checkSSN();
+    }
 
+    private static void checkSSN() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a SSN: ");
+        String ssn = input.nextLine();
+        if (ssn.charAt(3) == '-' && ssn.charAt(6) == '-') {
+            String str1 = ssn.substring(0, 3);
+            String str2 = ssn.substring(4, 6);
+            String str3 = ssn.substring(7);
+            String str = str1 + str2 + str3;
+            for (int i = str.length(); i > 0; i--) {
+                boolean right = Character.isDigit(str.charAt(i - 1));
+                if (!right) {
+                    System.out.println(ssn + " is an invalid social security number");
+                    System.exit(0);
+                }
+            }
+            System.out.println(ssn + " is a valid social security number");
+        } else {
+            System.out.println(ssn + " is an invalid social security number");
+        }
+    }
+
+    private static void showLenghtAndFirstCharacter() {
+        Scanner input=new Scanner(System.in);
+        System.out.print("Enter a string:");
+        String numbers=input.nextLine();
+        int l=numbers.length();
+        char ch=numbers.charAt(0);
+        System.out.println("length :"+l);
+        System.out.println("first character :"+ch);
     }
 
     private static void showHowManyDays() {
