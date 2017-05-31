@@ -9,9 +9,29 @@ public class TestForNo4 {
 //        calculateAreaOfTriangle();
 //        enterIntegerToShowASCII();
 //        enterCharacterToShowASCII();
-        guessBirthday();
+//        guessBirthday();
+        showTheHexValue();
 
+    }
 
+    private static void showTheHexValue() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a decimal value (0 to 15): ");
+        int number = input.nextInt();
+        if (number < 0 || number > 15) {
+            System.out.println(number + " is an invalid input");
+        }
+        boolean isSmall = number <= 9;
+        char ch = (char) (number + 'A' - 10);
+        //下面的方法在输出时当输入值大于9，输出的ch值显示为int型，囧
+        //System.out.println("The hex value is " + (isSmall?number:ch));
+        String result = "The hex value is ";
+        if (isSmall) {
+            result += number;
+        } else {
+            result += ch;
+        }
+        System.out.println(result);
     }
 
     private static void guessBirthday() {
