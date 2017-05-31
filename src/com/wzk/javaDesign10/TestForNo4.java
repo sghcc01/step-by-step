@@ -10,8 +10,34 @@ public class TestForNo4 {
 //        enterIntegerToShowASCII();
 //        enterCharacterToShowASCII();
 //        guessBirthday();
-        showTheHexValue();
+//        showTheHexValue();
+        hexValueTurnToBinary();
+    }
 
+    private static void hexValueTurnToBinary() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a Hex digit: ");
+        String hex = input.nextLine();
+        char ch = hex.charAt(0);
+        boolean isSmall = ch <= '9';
+        int inter = isSmall?(ch - '0'):(ch - 'A' + 10);
+        if (hex.length() != 1 || (int) ch < 0 || ch > 'F') {
+            System.out.println("bad input");
+            System.exit(1);
+        }
+        //sum变量没有实例化？
+        int sum;
+        String result = "";
+        for (int i = inter; i >= 1; i /= 2) {
+            if (i % 2 == 0) {
+                sum = 0;
+            } else {
+                sum = 1;
+            }
+            //网上找的方法，加反了，怎么把顺序调整过来呢？
+            result += sum;
+        }
+        System.out.println(result);
     }
 
     private static void showTheHexValue() {
