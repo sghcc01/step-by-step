@@ -8,8 +8,66 @@ public class TestForNo4 {
 //        calculateMaximumCircleDistance();
 //        calculateAreaOfTriangle();
 //        enterIntegerToShowASCII();
-        enterCharacterToShowASCII();
+//        enterCharacterToShowASCII();
+        guessBirthday();
 
+
+    }
+
+    private static void guessBirthday() {
+        System.out.println("It's your birthday in Set1:\n" +
+                "1 2 3 4 5\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10");
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter Y for Yes and N for No: ");
+        String set1 = input.next();
+        int sum = 0;
+        if (set1.equals("Y")) {
+            sum += 1;
+        }
+        System.out.println("It's your birthday in Set2:\n" +
+                "1 2 3 4 5\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10");
+        System.out.println("Enter Y for Yes and N for No: ");
+        String set2 = input.next();
+        if (set2.equals("Y")) {
+            sum += 2;
+        }
+        System.out.println("It's your birthday in Set3:\n" +
+                "1 2 3 4 5\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10");
+        System.out.println("Enter Y for Yes and N for No: ");
+        String set3 = input.next();
+        if (set3.equals("Y")) {
+            sum += 4;
+        }
+        System.out.println("It's your birthday in Set4:\n" +
+                "1 2 3 4 5\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10");
+        System.out.println("Enter Y for Yes and N for No: ");
+        String set4 = input.next();
+        if (set4.equals("Y")) {
+            sum += 8;
+        }
+        System.out.println("It's your birthday in Set5:\n" +
+                "1 2 3 4 5\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10\n" +
+                "6 7 8 9 10");
+        System.out.println("Enter Y for Yes and N for No: ");
+        String set5 = input.next();
+        if (set5.equals("Y")) {
+            sum += 16;
+        }
+        System.out.println("You birthday is " + sum + "!");
     }
 
     private static void enterCharacterToShowASCII() {
