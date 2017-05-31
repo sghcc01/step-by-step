@@ -13,7 +13,14 @@ public class TestForNo4 {
 //        showTheHexValue();
 //        hexValueTurnToBinary();
 //        convertLettersToNumbers();
+        showRandomUppercaseLetter();
+    }
 
+    private static void showRandomUppercaseLetter() {
+        int number = 'A' + (int)(Math.random() * 26);
+//        int和char不能相加，但是'A'+1 可以？
+//        char ch = 'A' + number;
+        System.out.println("Random letter is " + (char)number);
     }
 
     private static void convertLettersToNumbers() {
