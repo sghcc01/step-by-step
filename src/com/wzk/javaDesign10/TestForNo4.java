@@ -13,7 +13,33 @@ public class TestForNo4 {
 //        showTheHexValue();
 //        hexValueTurnToBinary();
 //        convertLettersToNumbers();
-        showRandomUppercaseLetter();
+//        showRandomUppercaseLetter();
+        showHowManyDays();
+    }
+
+    private static void showHowManyDays() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter a year: ");
+        int year = input.nextInt();
+        System.out.println("Enter a mouth: ");
+        String mouth = input.next();
+        boolean is31days =
+                           mouth.equals("Jan")
+                        || mouth.equals("Mar")
+                        || mouth.equals("May")
+                        || mouth.equals("Jul")
+                        || mouth.equals("Aug")
+                        || mouth.equals("Oct")
+                        || mouth.equals("Dec");
+        if (mouth.equals("Feb")) {
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                System.out.println(mouth + " " + year + " has 29 days");
+            } else {
+                System.out.println(mouth + " " + year + " has 28 days");
+            }
+        } else {
+            System.out.println(mouth + " " + year + " has " + (is31days ? 31 : 30)+" days");
+        }
     }
 
     private static void showRandomUppercaseLetter() {
