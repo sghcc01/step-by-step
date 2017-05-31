@@ -15,6 +15,7 @@ public class TestForNo4 {
 //        convertLettersToNumbers();
 //        showRandomUppercaseLetter();
         showHowManyDays();
+
     }
 
     private static void showHowManyDays() {
@@ -22,6 +23,7 @@ public class TestForNo4 {
         System.out.println("Enter a year: ");
         int year = input.nextInt();
         System.out.println("Enter a mouth: ");
+        //在此处我使用input.nextLine()方法后，无法输入mouth，直接显示了结果,不清楚原因
         String mouth = input.next();
         boolean is31days =
                            mouth.equals("Jan")
