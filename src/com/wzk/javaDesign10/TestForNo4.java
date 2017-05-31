@@ -17,7 +17,41 @@ public class TestForNo4 {
 //        showHowManyDays();
 //        showLenghtAndFirstCharacter();
 //        checkSSN();
-        exercise04_22();
+//        exercise04_22();
+        exercise04_23();
+    }
+
+    private static void exercise04_23() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter employee's name: ");
+        String name = input.nextLine();
+        System.out.println("Enter number of hours worked in a week: ");
+        double hours = input.nextDouble();
+        System.out.println("Enter hourly pay rate: ");
+        double payRate = input.nextDouble();
+        System.out.println("Enter federal tax withholding rate: ");
+        double federalTax = input.nextDouble();
+        System.out.println("Enter state tax withholding rate: ");
+        double stateTax = input.nextDouble();
+        double grossRate = payRate * hours;
+        System.out.printf(
+                "Employee Name: %s\n" +
+                "Hours Worked: %.1f\n" +
+                "Pay Rate: $%.2f\n" +
+                "Gross Pay: $%.1f\n" +
+                "Deductions:\n" +
+                "  Federal Withholding (20.0%%):$%.1f\n" +
+                "  State Withholding (9.0%%): $%.2f\n" +
+                "  Total Deduction: $%.2f\n" +
+                "Net Pay: $%.2f",
+                name,
+                hours,
+                payRate,
+                grossRate,
+                grossRate * federalTax,
+                grossRate * stateTax,
+                grossRate * federalTax + grossRate * stateTax,
+                grossRate - grossRate * federalTax - grossRate * stateTax);
     }
 
     private static void exercise04_22() {
