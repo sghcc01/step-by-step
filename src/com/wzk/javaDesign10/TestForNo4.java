@@ -170,7 +170,8 @@ public class TestForNo4 {
                 sum = 1;
             }
             //网上找的方法，加反了，怎么把顺序调整过来呢？
-            result += sum;
+            //已经调整过来了，之前使用的 result += sum 方法。把它改为如下表达式就可以了
+            result = sum + result;
         }
         System.out.println(result);
     }
