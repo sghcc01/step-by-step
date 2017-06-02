@@ -18,7 +18,7 @@ public class TestForNo5 {
         System.out.println("The first 50 prime numbers are \n");
         while (count < NUMBER_OF_PRIMES) {
             boolean isPrime = true;
-            for (int divisor = 1; divisor <= number / 2; divisor++) {
+            for (int divisor = 2; divisor <= number / 2; divisor++) {
                 if (number % divisor == 0) {
                     isPrime = false;
                     break;
@@ -30,10 +30,10 @@ public class TestForNo5 {
                     System.out.println(number);
                 }
                 else {
-                    System.out.print(number + " ");
+                    System.out.printf("%-6d",number);
                 }
-            number++;
             }
+            number++;
         }
     }
 
