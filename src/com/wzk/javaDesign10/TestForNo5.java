@@ -7,7 +7,34 @@ public class TestForNo5 {
 //        testBreak();
 //        testContinue();
 //        testBreakOrContinue();
-        printFiftyPrimeNumber();
+//        printFiftyPrimeNumber();
+        statisticalData();
+    }
+
+    private static void statisticalData() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter an integer, the input ends of if it is 0: ");
+        int num = input.nextInt();
+        int numberPositives = 0, numberNegatives = 0,total = 0,count = 0;
+        while (num != 0) {
+            if (num > 0) {
+                numberPositives++;
+            } else {
+                numberNegatives++;
+            }
+            total += num;
+            count++;
+            num = input.nextInt();
+        }
+        if (count == 0) {
+            System.out.println("No number are entered except 0");
+        } else {
+            System.out.println("The number of positives is " + numberPositives);
+            System.out.println("The number of negatives is " + numberNegatives);
+            System.out.println("The total is " + total);
+            System.out.printf("The average is %.2f", (double) total / count);
+        }
+
     }
 
     private static void printFiftyPrimeNumber() {
