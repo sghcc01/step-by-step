@@ -3,8 +3,6 @@ package com.wzk.javaDesign10;
 import java.util.Scanner;
 
 public class TestForNo7 {
-    private static char[] grade;
-
     public static void main(String[] args) {
         exercise7_1();
     }
