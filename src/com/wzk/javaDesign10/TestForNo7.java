@@ -4,7 +4,26 @@ import java.util.Scanner;
 
 public class TestForNo7 {
     public static void main(String[] args) {
-        exercise7_1();
+//        exercise7_1();
+        exercise7_2();
+    }
+
+    private static void exercise7_2() {
+        System.out.println("Enter ten numbers: ");
+        Scanner input = new Scanner(System.in);
+        double[] numbers = new double[10];
+        for (int i = 0; i < 10; i++) {
+            numbers[i] = input.nextDouble();
+        }
+        System.out.println("The reverse is " + java.util.Arrays.toString(reverse(numbers)));
+    }
+
+    private static double[] reverse(double[] numbers) {
+        double[] reverseNumber = new double[numbers.length];
+        for (int i = 0, j = numbers.length - 1; i < numbers.length; i++, j--) {
+            reverseNumber[i] = numbers[j];
+        }
+        return reverseNumber;
     }
 
     private static void exercise7_1() {
