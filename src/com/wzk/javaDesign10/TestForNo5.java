@@ -1,14 +1,62 @@
 package com.wzk.javaDesign10;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class TestForNo5 {
-    public static void main(String[] args) {
+    public static void main(String[] x) {
 //        testBreak();
 //        testContinue();
 //        testBreakOrContinue();
 //        printFiftyPrimeNumber();
-        statisticalData();
+//        statisticalData();
+//        additionQuizLoop();
+//        isPrime(77);
+//        reverse();
+        test();
+    }
+
+    private static void test() {
+        int[] list = {1, 2, 3, 4, 5};
+        java.util.Arrays.fill(list,8);
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i]);
+        }
+        System.out.println(java.util.Arrays.toString(list));
+    }
+
+    private static void reverse(int[] list) {
+        int[] newList = new int[list.length];
+        for (int i = 0; i < list.length; i++) {
+            newList[i] = list[list.length - 1 - i];
+        }
+        for (int i = 0; i < list.length; i++) {
+            list[i] = newList[i];
+        }
+    }
+
+//    private static void reverse() {
+//        int[] list = {1, 2, 3, 4, 5};
+//        for (int i = 0, j = list.length - 1; i < list.length; i++, j--) {
+//            int temp = list[i];
+//            list[j] = list[i];
+//            list[i] = temp;
+//        }
+//        for (int i = 0; i < list.length; i++) {
+//            System.out.print(list[i]);
+//        }
+//    }
+
+    private static boolean isPrime(int n) {
+        for (int i = 2; i < n; i++) {
+            if (n % i == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private static void additionQuizLoop() {
     }
 
     private static void statisticalData() {
