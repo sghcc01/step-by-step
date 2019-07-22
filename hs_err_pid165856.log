@@ -157,8 +157,8 @@ Deoptimization events (0 events):
 No events
 
 Internal exceptions (6 events):
-Event: 0.029 Thread 0x00000000023b8000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d59930b0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\srœÁÌnZDù?
-Event: 0.029 Thread 0x00000000023b8000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d5993398) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\src\share\vm\prims\j∫∫?1ïΩ?
+Event: 0.029 Thread 0x00000000023b8000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d59930b0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\srÔøΩÔøΩÔøΩnZDÔøΩ?
+Event: 0.029 Thread 0x00000000023b8000 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d5993398) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\src\share\vm\prims\jÔøΩÔøΩ?1ÔøΩÔøΩ?
 Event: 0.116 Thread 0x00000000023b8000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d5b315a8) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
 Event: 0.116 Thread 0x00000000023b8000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d5b319a0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
 Event: 0.116 Thread 0x00000000023b8000 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d5b359d0) thrown at [C:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u71\5731\hotspot\src\share\vm\prims\jvm.cpp, line 1386]
