@@ -18,7 +18,28 @@ public class TestForNo4 {
 //        showLenghtAndFirstCharacter();
 //        checkSSN();
 //        exercise04_22();
-        exercise04_23();
+//        exercise04_23();
+//        exercise04_01();
+//        exercise04_16();
+          exercise04_24();
+    }
+    private static void exercise04_24() {
+        int random = 65 + (int) (Math.random() * 26);
+        System.out.println((char) random);
+    }
+    private static void exercise04_16() {
+        int random = 65 + (int) (Math.random() * 26);
+        System.out.println((char) random);
+    }
+    private static void exercise04_01() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the length from the center to a vertex: ");
+        double r = input.nextDouble();
+        //计算边长s
+        double s = 2 * r * Math.sin(Math.PI / 5);
+        //计算面积
+        double v = 5 * s * s / (4 * Math.tan(Math.PI / 5));
+        System.out.printf("The area of the pentagon is %.2f\n", v);
     }
 
     private static void exercise04_23() {
@@ -60,7 +81,12 @@ public class TestForNo4 {
         String s1 = input.nextLine();
         System.out.println("Enter string s2: ");
         String s2 = input.nextLine();
-        if (s1.indexOf(s2) != -1) {
+//        if (s1.indexOf(s2) != -1) {
+//            System.out.println(s2 + " is a substring of " + s1);
+//        } else {
+//            System.out.println(s2 + " is not a substring of " + s1);
+//        }
+        if (s1.contains(s2)) {
             System.out.println(s2 + " is a substring of " + s1);
         } else {
             System.out.println(s2 + " is not a substring of " + s1);
