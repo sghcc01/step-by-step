@@ -21,7 +21,8 @@ public class TestForNo4 {
 //        exercise04_23();
 //        exercise04_01();
 //        exercise04_16();
-          exercise04_24();
+//          exercise04_24();
+        hexValueTurnToBinary();
     }
     private static void exercise04_24() {
         int random = 65 + (int) (Math.random() * 26);
@@ -197,7 +198,8 @@ public class TestForNo4 {
             }
             //网上找的方法，加反了，怎么把顺序调整过来呢？
             //已经调整过来了，之前使用的 result += sum 方法。把它改为如下表达式就可以了
-            result = sum + result;
+            //result = sum + result;
+            result = ("" + sum).concat(result);
         }
         System.out.println(result);
     }
