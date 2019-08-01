@@ -13,7 +13,30 @@ public class TestForNo5 {
 //        additionQuizLoop();
 //        isPrime(77);
 //        reverse();
-        test();
+//        test();
+        exercise05_01();
+    }
+    private static void exercise05_01() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an integer,the input ends if it is 0: ");
+        int positivesNum = 0;
+        int negativesNum = 0;
+        int totalNum = 0;
+        int averageNum = 0;
+        int count = 0;
+        int num = input.nextInt();
+        if (num != 0) {
+            while (num != 0) {
+                if (num > 0) {
+                    positivesNum++;
+                }else negativesNum++;
+                totalNum += num;
+                count++;
+                num = input.nextInt();
+            }
+            System.out.printf("The number of positives is %d\nThe number of negatives is %d\nThe total is %.1f\nThe average is %.2f",positivesNum,negativesNum,(double)totalNum,(double)totalNum / count);
+        } else
+            System.out.println("No numbers are entered except 0");
     }
 
     private static void test() {
