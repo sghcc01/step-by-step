@@ -24,7 +24,44 @@ public class TestForNo5 {
         }
         System.out.println(java.util.Arrays.toString(list));
     }
-
+    private static void exercise05_07() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of studers: ");
+        int count = input.nextInt();
+        double maxScore = 0;
+        String maxOfStudent ="";
+        Scanner input1 = new Scanner(System.in);
+        for (int i = 0; i < count; i++) {
+            System.out.println("Enter student name: ");
+            String name = input1.nextLine();
+            System.out.println("Enter the score of this student: ");
+            double score = input.nextDouble();
+            if (score > maxScore) {
+                maxScore = score;
+                maxOfStudent = name;
+            }
+        }
+        System.out.println("The highest score of student is " +maxOfStudent);
+    }
+    private static void exercise05_06() {
+        double fee = 10000;
+        for (int i = 0; i < 10; i++) {
+            fee = fee * (1 + 0.05);
+        }
+        double totalFee = fee;
+        for (int i = 0; i < 4; i++) {
+            fee = fee * (1 + 0.05);
+            totalFee += fee;
+        }
+        System.out.println("Ten years later, the tuition fee is " + Math.round(fee) + "\nTen years later,Total tuition fee within 4 years is " + Math.round(totalFee));
+    }
+    private static void exercise05_05() {
+        System.out.println("千克                  磅           磅                  千克");
+        for (int i = 1,j = 20; i < 200; i = i + 2,j = j + 5) {
+            System.out.printf("%-4d%20.1f",i, i * 2.2);
+            System.out.printf("           %-4d%20.2f\n",j, j / 2.2);
+        }
+    }
     private static void reverse(int[] list) {
         int[] newList = new int[list.length];
         for (int i = 0; i < list.length; i++) {
