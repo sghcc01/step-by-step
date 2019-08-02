@@ -16,6 +16,16 @@ public class TestForNo5 {
 //        test();
         exercise05_01();
     }
+
+    private static void test() {
+        int[] list = {1, 2, 3, 4, 5};
+        java.util.Arrays.fill(list,8);
+        for (int i = 0; i < list.length; i++) {
+            System.out.println(list[i]);
+        }
+        System.out.println(java.util.Arrays.toString(list));
+    }
+
     private static void exercise05_01() {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter an integer,the input ends if it is 0: ");
@@ -39,14 +49,6 @@ public class TestForNo5 {
             System.out.println("No numbers are entered except 0");
     }
 
-    private static void test() {
-        int[] list = {1, 2, 3, 4, 5};
-        java.util.Arrays.fill(list,8);
-        for (int i = 0; i < list.length; i++) {
-            System.out.println(list[i]);
-        }
-        System.out.println(java.util.Arrays.toString(list));
-    }
     private static void exercise05_07() {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter the number of studers: ");
