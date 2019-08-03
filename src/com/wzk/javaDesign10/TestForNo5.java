@@ -14,7 +14,7 @@ public class TestForNo5 {
 //        isPrime(77);
 //        reverse();
 //        test();
-        exercise05_01();
+        exercise05_08();
     }
 
     private static void test() {
@@ -24,6 +24,26 @@ public class TestForNo5 {
             System.out.println(list[i]);
         }
         System.out.println(java.util.Arrays.toString(list));
+    }
+
+    private static void exercise05_08() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter students count: ");
+        int count = input.nextInt();
+        double max = 0;
+        String maxName = "";
+        for (int i = 0; i < count; i++) {
+            Scanner input1 = new Scanner(System.in);
+            System.out.println("Enter the name of No." + (i + 1) + ": ");
+            String name = input1.nextLine();
+            System.out.println("Enter the score of No." + (i + 1) + ": ");
+            double score = input1.nextDouble();
+            if (max < score) {
+                max = score;
+                maxName = name;
+            }
+        }
+        System.out.println("The top Score Student is " + maxName);
     }
 
     private static void exercise05_01() {
