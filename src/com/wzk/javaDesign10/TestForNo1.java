@@ -12,13 +12,79 @@ public class TestForNo1 {
 //        secondsToMinntes();
 //        Test3();
 //        showCurrentTime();
-        test();
+//        test();
+//        toBinary(18);
+//        arrayRevert();
+        testRevert() ;
+    }
+    public static void testRevert(){
+        String testWorld = "www.google.com/test/question" ;
+        String [] temp =  testWorld.split("\\/",2) ;
+        String testSplit [] = temp[0].split("\\.") ;
+        for (int x = 0 ; x < temp.length ; x ++) {
+            System.out.println(temp[x]);
+        }
+        int foot = testSplit.length;
+        String result = "";
+        for (int x = 0 ; x < foot / 2 ; x ++){
+            String temps ;
+            temps = testSplit[x] ;
+            testSplit[x] = testSplit[foot - 1] ;
+            testSplit [foot - 1] = temps ;
+
+        }
+        for (int x = 0 ; x < testSplit.length ; x ++) {
+            System.out.println(testSplit[x]);
+        }
+    }
+    public static void arraySort() {
+        int data[] = new int[] {1,9,6,2,8,4};
+        for (int x = 0;x < data.length;x ++) {
+            for (int i = 0;i < data.length -1;i ++) {
+                if (data[i] > data[i + 1]) {
+                    int temp = data[i];
+                    data[i] = data[i + 1];
+                    data[i + 1] = temp;
+                }
+            }
+        }
+        for (int i = 0;i < data.length;i ++) {
+            System.out.print(data[i] + "、");
+        }
+    }
+    public static void arrayRevert() {
+        int data[] = new int[] {1,9,6,2,8,4};
+        int startLen = 0;
+        int endLen = data.length -1;
+
+        for (int i = 0;i < data.length / 2;i ++) {
+            int temp = data[startLen];
+            data[startLen ++] = data[endLen];
+            data[endLen --] = temp;
+        }
+        for (int i = 0;i < data.length;i ++) {
+            System.out.print(data[i] + "、");
+        }
+    }
+    public static void toBinary(int num) {
+        if (num == 0) {
+            return;
+        }
+        toBinary(num / 2);
+        System.out.print(num % 2);
     }
 
     private static void test() {
-        double a = 10.03 * 100;
-        int b = (int)a;
-        System.out.println(b);
+        for (int i = 100;i<1000;i++){
+            int gewei = i % 10;
+            int shiwei = i / 10 % 10;
+            int baiwei = i / 100 % 10;
+            while (baiwei * baiwei * baiwei + shiwei * shiwei * shiwei + gewei * gewei * gewei == i){
+                System.out.println(i);
+                break;
+            }
+        }
+
     }
 
     private static void showCurrentTime() {
@@ -78,7 +144,7 @@ public class TestForNo1 {
         int people1 = basePeople;
         long T = 90;//365 * n * 24 * 60 * 60;
 
-       long people = basePeople + (T / 7) - (T / 13) + (T / 45);
+        long people = basePeople + (T / 7) - (T / 13) + (T / 45);
         int sum = 0;
         for (long i = 1; i <= T; i++) {
             if (i % 7 == 0) {
